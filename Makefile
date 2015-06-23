@@ -16,6 +16,10 @@ kossel-cfg:
 build-firmware: link-srcdir clean-pde
 	ino build -m mega2560
 
+init:
+	git checkout -- Marlin/Marlin.pde
+	rm src
+
 .PHONY: clean
 
 clean:
